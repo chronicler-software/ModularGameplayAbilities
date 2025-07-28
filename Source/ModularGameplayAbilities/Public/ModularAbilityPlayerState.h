@@ -36,6 +36,9 @@ public:
 	bool HasStatTag(FGameplayTag Tag) const;
 
 	void GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const;
+public:
+	/*Name of the AbilitySystem component. Use this name if you want to use a different class (with ObjectInitializer.SetDefaultSubobjectClass).*/
+	static FName AbilitySystemComponentName;
 
 private:
 	// The ability system component sub-object used by player characters.

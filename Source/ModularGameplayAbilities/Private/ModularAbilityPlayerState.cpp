@@ -5,9 +5,12 @@
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(ModularAbilityPlayerState)
 
+FName AModularAbilityPlayerState::AbilitySystemComponentName(TEXT("ModularAbilitySystemComponent"));
+
 AModularAbilityPlayerState::AModularAbilityPlayerState(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
+	ModularAbilitySystemComponent = CreateDefaultSubobject<UModularAbilitySystemComponent>(AModularAbilityPlayerState::AbilitySystemComponentName);
 }
 
 UModularAbilitySystemComponent* AModularAbilityPlayerState::GetAbilitySystemComponent() const
