@@ -1,23 +1,26 @@
 ﻿#pragma once
 
+#include "AbilitySystemInterface.h"
 #include "GameplayTagStack.h"
-#include "ModularPlayerState.h"
 #include "ActorComponent/ModularAbilitySystemComponent.h"
 #include "Player/ModularExperiencePlayerState.h"
 
 #include "ModularAbilityPlayerState.generated.h"
 
 UCLASS(Config = "Game")
-class MODULARGAMEPLAYABILITIES_API AModularAbilityPlayerState : public AModularExperiencePlayerState
+class MODULARGAMEPLAYABILITIES_API AModularAbilityPlayerState : public AModularExperiencePlayerState, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
 public:
 	AModularAbilityPlayerState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+	
+	//~ Begin IAbilitySystemInterface
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+	//~ End IAbilitySystemInterface
 
 	UFUNCTION(BlueprintCallable, Category = "Lyra|PlayerState")
 	UModularAbilitySystemComponent* GetModularAbilitySystemComponent() const { return ModularAbilitySystemComponent; }
-	virtual UModularAbilitySystemComponent* GetAbilitySystemComponent() const;
 
 	// Adds a specified number of stacks to the tag (does nothing if StackCount is below 1).
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "ModularAbility")
