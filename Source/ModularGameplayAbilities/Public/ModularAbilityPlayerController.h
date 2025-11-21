@@ -13,7 +13,7 @@ class UModularAbilitySystemComponent;
  * Drives ModularAbilitySystemComponent input processing.
  * Inherits from ACommonPlayerController to work with CommonUI.
  */
-UCLASS(Config = "Game")
+UCLASS()
 class MODULARGAMEPLAYABILITIES_API AModularAbilityPlayerController : public ACommonPlayerController
 {
 	GENERATED_BODY()
