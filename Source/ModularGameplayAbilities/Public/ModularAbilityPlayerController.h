@@ -7,6 +7,12 @@
 
 class UModularAbilitySystemComponent;
 
+/**
+ * AModularAbilityPlayerController
+ * 
+ * Drives ModularAbilitySystemComponent input processing.
+ * Inherits from ACommonPlayerController to work with CommonUI.
+ */
 UCLASS(Config = "Game")
 class MODULARGAMEPLAYABILITIES_API AModularAbilityPlayerController : public ACommonPlayerController
 {
