@@ -11,9 +11,9 @@ AModularAbilityPlayerState::AModularAbilityPlayerState(const FObjectInitializer&
 	ModularAbilitySystemComponent = CreateDefaultSubobject<UModularAbilitySystemComponent>("AbilitySystemComponent");
 }
 
-UModularAbilitySystemComponent* AModularAbilityPlayerState::GetAbilitySystemComponent() const
+UAbilitySystemComponent* AModularAbilityPlayerState::GetAbilitySystemComponent() const
 {
-	return GetModularAbilitySystemComponent();
+	return ModularAbilitySystemComponent;
 }
 
 void AModularAbilityPlayerState::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
