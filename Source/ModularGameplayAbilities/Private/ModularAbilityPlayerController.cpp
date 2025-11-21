@@ -3,6 +3,8 @@
 #include "ModularAbilityPlayerState.h"
 #include "ActorComponent/ModularAbilitySystemComponent.h"
 
+#include UE_INLINE_GENERATED_CPP_BY_NAME(ModularAbilityPlayerController)
+
 AModularAbilityPlayerController::AModularAbilityPlayerController(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
