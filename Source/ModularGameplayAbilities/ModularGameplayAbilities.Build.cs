@@ -26,6 +26,7 @@ public class ModularGameplayAbilities : ModuleRules
 				"Core",
 				"GameFeatures",
 				"GameplayAbilities",
+				"CommonGame",
 				"ModalCamera",
 				"ModularGameplay",
 				"ModularGameplayExperiences"
